@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+    <title> Synaptyc</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="https://fonts.googleapis.com/css?family=El+Messiri%7CSpectral" rel="stylesheet">
+    <link rel="icon" href="images/icons/logo-icon.gif" type="image/gif" sizes="16x16">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <a class="menu-mobile" href="#contact"> <img src="images/icons/menu.png" alt="Hamburger Menu Icon"></a>
+            <nav class="stroke desktop-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/portofolio.html">Portfolio</a></li>
+                    <li><a href="https://synaptycsound.wordpress.com/">Blog</a></li>
+                    <li><a href="pages/aboutme.html">About Me</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- .header-->
+        <div id="main-content">
+            <main class="content">
+                <!-- Start of About Me -->
+                <div class="part aboutme">
+                    <div class="story">
+                        <h1> Razvan Andrei Jumuga </h1>
+                        <p> Hello! I am glad to see you are interested in my work as a Multimedia Designer Student and I am always ready to work with you in different projects. In this website you will get to know a bit about me and what can I do by now, after one semester of studying Multimedia Design. Enjoy! </p>
+                    </div>
+                </div>
+                <!-- END of About Me -->
+
+                <!-- Start of Transition -->
+                <div class="part" id="transition">
+                    <p> "The people who are crazy enough to think they can change the world, are the ones to do"</p> <br>
+                    <h2> Steve Jobs </h2> 
+                </div>
+                <!-- END of Transition -->
+
+                <!-- Start of Portofolio -->
+                <div class="part" id="portofolio">
+                    <div id="text">
+                        <h2>Get to know me</h2>
+                        <p> You can know someone in different ways, first one would be for the person to tell you about </p>
+                        <p> The person's projects are a good way to evaluate the level of knowledges and professionalism </p>
+                        <p> A simple story, a resume of a week and that's it, you get into daily life of someone else </p>
+                        <p> But no matter what, everyone has a dream, a future project, something they wish to become true </p>
+                    </div>
+
+                    <div class="part" id="mobile-portofolio">
+                        <a href="pages/aboutme.html">
+                            <img src="images/mobile/aboutme_mobile.jpg" alt="About Me Section">
+                            <h3>About Me</h3>
+                        </a>
+                        <a href="pages/portofolio.html">
+                            <img src="images/mobile/portofolio_mobile.jpg" alt="Projects">
+                            <h3>Portfolio</h3>
+                        </a>
+                        <a href="https://synaptycsound.wordpress.com/">
+                            <img src="images/mobile/blog_mobile.jpg" alt="Assignments">
+                            <h3> Blog </h3>
+                        </a>
+
+                    </div>
+
+                    <div id="slider">
+                        <div class="content-of-photo-slider">
+                            <button class="left-button" onclick="plusDivs(-1)">&#10094;</button>
+
+                            <div class="carusel">
+                                <a href="pages/portofolio.html">
+                                         <img class="photo-slide" src="images/slider/portofolio.jpg" alt="photo of projects" style="max-width: 100%" "height: auto;">
+                                        <h3>Projects</h3> 
+                                    </a>
+                            </div>
+
+                            <div class="carusel">
+                                <a href="pages/about.html"> 
+                                        <img class="photo-slide" src="images/slider/aboutme.jpg"
+                            alt="photos of assignemts" style="max-width: 100%" "height: auto;">
+                                        <h3> About Me </h3>
+                                    </a>
+                            </div>
+
+                            <div class="carusel">
+                                <a href="https://synaptycsound.wordpress.com/"> 
+                                        <img class="photo-slide" src="images/slider/blog.jpg"
+                            alt="gallery image" 
+                            style="max-width: 100%" "height: auto;">
+                                        <h3> Blog </h3>
+                                    </a>
+                            </div>
+                            <!-- Start of JavaScript -->
+                            <script>
+                                var slideIndex = 1;
+                                showDivs(slideIndex);
+
+                                function plusDivs(n) {
+                                    showDivs(slideIndex += n);
+                                }
+
+                                function showDivs(n) {
+                                    var i;
+                                    var x = document.getElementsByClassName("carusel");
+                                    if (n > x.length) {
+                                        slideIndex = 1
+                                    }
+                                    if (n < 1) {
+                                        slideIndex = x.length
+                                    }
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";
+                                    }
+                                    x[slideIndex - 1].style.display = "block";
+                                }
+
+
+                                var myIndex = 0;
+                                carousel();
+
+                                function carousel() {
+                                    var i;
+                                    var x = document.getElementsByClassName("carusel");
+                                    for (i = 0; i < x.length; i++) {
+                                        x[i].style.display = "none";
+                                    }
+                                    myIndex++;
+                                    if (myIndex > x.length) {
+                                        myIndex = 1
+                                    }
+                                    x[myIndex - 1].style.display = "block";
+                                    setTimeout(carousel, 5000); // Change image every 5 seconds
+                                }
+
+                            </script>
+                            <!-- End of JavaScript -->
+                            <button class="right-button" onclick="plusDivs(1)">&#10095;</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- END of Portofolio -->
+            </main>
+            <!-- END of .content -->
+        </div>
+    </div>
+    <!-- End of .wrapper -->
+    <!-- Start of Footer -->
+    <footer class="footer">
+        <div id="contact">
+            <nav class="stroke bottom mobile-menu-version">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/portofolio.html">Portfolio</a></li>
+                    <li><a href="https://synaptycsound.wordpress.com/">Blog</a></li>
+                    <li><a href="pages/aboutme.html">About Me</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </nav>
+            <nav class="stroke e-mail e-mail-mobile">
+                <ul>
+                    <li> <a href="mailto:synaptycstudios@gmail.com">synaptycstudios@gmail.com</a></li>
+                    <li> <a href="mailto:eaaraj@students.eaaa.dk">eaaraj@students.eaaa.dk</a></li>
+                </ul>
+            </nav>
+            <nav class="social">
+                <ul>
+                    <li> <a href="https://www.facebook.com/razvanj.andrei"><img src="images/icons/facebook-mobile-icon.png" alt="facebook icon"></a></li>
+                    <li> <a href="https://twitter.com/synaptyc_studio?lang=en"><img src="images/icons/twitter-mobile-icon.png" alt="twitter icon"></a></li>
+                    <li> <a href="https://www.instagram.com/synaptyc_studio/?hl=en"><img src="images/icons/instagram-mobile-icon.png" alt="instagram icon"></a></li>
+                </ul>
+            </nav>
+            <p> <small> &copy; Copyrights </small> Business Academy Aarhus Student - Razvan Andrei Jumuga </p>
+        </div>
+        <!-- END of Contact -->
+    </footer>
+</body>
+
+</html>

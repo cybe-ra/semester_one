@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
+    <title> Synaptyc</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="https://fonts.googleapis.com/css?family=Marck+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+    <link rel="icon" href="icons/logo-icon.gif" type="image/gif" sizes="16x16">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <nav class="stroke">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Portofolio</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- .header-->
+        <div id="main-content">
+            <main class="content">
+                
+                <h2> GALLERY </h2>
+                <div class="part" id="gallery-content">
+
+                    <div class="gallery">
+
+                        <div class="post" id="3st-post">
+                            <a href="#anotherpage">
+                                <h2> Here goes a h2 Header </h2>
+                                <img src="images/post-image.jpg" alt="first post image">
+                            </a>
+                        </div>
+                        <div class="post" id="3st-post">
+                            <a href="#anotherpage">
+                                <h2> Here goes a h2 Header </h2>
+                                <img src="images/post-image.jpg" alt="first post image">
+                            </a>
+                        </div>
+                        <div class="post" id="3st-post">
+                            <a href="#anotherpage">
+                                <h2> Here goes a h2 Header </h2>
+                                <img src="images/post-image.jpg" alt="first post image">
+                            </a>
+                        </div>
+                        <div class="post" id="3st-post">
+                            <a href="#anotherpage">
+                                <h2> Here goes a h2 Header </h2>
+                                <img src="images/post-image.jpg" alt="first post image">
+                            </a>
+                        </div>
+                        <div class="post" id="3st-post">
+                            <a href="#anotherpage">
+                                <h2> Here goes a h2 Header </h2>
+                                <img src="images/post-image.jpg" alt="first post image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                 END of Gallery -->
+            </main>
+            <!-- .content -->
+        </div>
+    </div>
+    <!-- .wrapper -->
+
+    <footer class="footer">
+        <div id="contact">
+            <nav class="e-mail">
+                <ul>
+                    <li> <a href="mailto:razvanj.andrei@outlook.com">razvanj.andrei@outlook.com</a></li>
+                    <li> <a href="mailto:synaptycsound@gmail.com">synaptycsound@gmail.com</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- END of Contact -->
+
+        <div id="social">
+            <a href="https://www.facebook.com/razvanj.andrei"><img src="icons/facebook-icon.png" alt="Facebook Logo"></a>
+            <a href="https://twitter.com/synaptyc_studio"><img src="icons/twitter-icon.png" alt="Twitter Logo"></a>
+            <a href="https://www.instagram.com/synaptyc_studio/"><img src="icons/instagram-icon.png" alt="Instagram Logo"></a>
+        </div>
+        <!-- END of Social -->
+    </footer>
+    <!-- .footer -->
+</body>
+
+</html>
+
+<!--------------Start of JavaScript ------------>
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("photo-slide");
+        if (n > x.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = x.length
+        }
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndex - 1].style.display = "block";
+    }
+
+
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("photo-slide");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        myIndex++;
+        if (myIndex > x.length) {
+            myIndex = 1
+        }
+        x[myIndex - 1].style.display = "block";
+        setTimeout(carousel, 5000); // Change image every 5 seconds
+    }
+
+</script>
+<!----------------End of JavaScript------------------>
